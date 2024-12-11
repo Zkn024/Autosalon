@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация в автосалоне</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function redirectToShowroom(event) {
+            event.preventDefault(); // Предотвращает стандартное поведение формы
+            alert("Ваша регистрация успешно отправлена! Вы будете перенаправлены в автосалон.");
+            window.location.href = "index.html"; // Укажите ссылку на автосалон
+        }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Регистрация в автосалоне</h1>
+        </div>
+    </header>
+    <section class="registration">
+        <div class="container">
+            <form class="registration-form" onsubmit="redirectToShowroom(event)">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+
+                <label for="email">Электронная почта:</label>
+                <input type="email" id="email" name="email" placeholder="Введите ваш email" required>
+
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Введите ваш номер телефона" required>
+
+                <label for="car">Выберите автомобиль:</label>
+                <select id="car" name="car" required>
+                    <option value="" disabled selected>Выберите модель</option>
+                    <option value="mercedes">Mercedes-Benz S500</option>
+                    <option value="toyota">Toyota Land Cruiser 300</option>
+                    <option value="tesla">Tesla Model S</option>
+                    <option value="bmw">BMW X7</option>
+                </select>
+
+                <label for="message">Сообщение (необязательно):</label>
+                <textarea id="message" name="message" rows="4" placeholder="Ваши пожелания"></textarea>
+
+                <button type="submit" class="btn">Отправить</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

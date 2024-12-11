@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автосалон "Astana Motors"</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Автосалон "Astana Motors"</h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="sidebar" class="sidebar">
+    <button class="close-btn" onclick="closeSidebar()">×</button>
+    <a href="overview_with_reviews.html" class="sidebar-btn">Обзоры на автомобили</a>
+    <a href="Отзывы.html" class="sidebar-btn">Отзывы</a>
+    <a href="credit_calculator.html" class="sidebar-btn">Подсчитать стоимость автомомбиля</a>
+    <a href="fixed_bootstrap_reviews_with_carousel.html" class="sidebar-btn">Топовые машины</a>
+</div>
+<div id="backdrop" class="backdrop" onclick="closeSidebar()"></div>
+<button class="open-btn" onclick="openSidebar()">☰ Меню</button>
+
+    </header>
+    <section class="hero">
+        <div class="container">
+            <h2>Добро пожаловать в "Astana Motors"</h2>
+            <p>Найдите автомобиль вашей мечты уже сегодня!</p>
+            <p>Сегодня трудно представить нашу жизнь без автомобилей. для одних это просто средство передвижения, для других – источник дохода, а для третьих – как смысл жизни. Сокращая расстояния, автомобили делают нашу жизнь свободнее и удобнее. позволяет нам добраться до мест нашей мечты, помогает нам преобразовать наше свободное время</p>
+            <p>Astana Motors
+Крупнейший автомобильный дилер в Казахстане
+
+Является крупнейшим автомобильным дилером в Казахстане, базирующимся в Астане. Astana Motors продает автомобили марок Toyota, Subaru, Hyundai, BMW и Nissan в своих дилерских центрах.</p>
+            <a href="catalog.html" class="btn">Посмотреть каталог</a>
+        </div>
+    </section>
+<script>
+function openSidebar() {
+    document.getElementById("sidebar").style.width = "250px";
+    document.getElementById("backdrop").style.display = "block";
+}
+
+function closeSidebar() {
+    document.getElementById("sidebar").style.width = "0";
+    document.getElementById("backdrop").style.display = "none";
+}
+</script>
+
+</body>
+</html>
